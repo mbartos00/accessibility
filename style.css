@@ -6,6 +6,7 @@
   --placeholder: hsla(0, 0%, 7%, 0.5);
   --black: hsla(0, 0%, 7%, 1);
   --white: hsla(0, 0%, 100%, 1);
+  --light-gray: hsl(120, 8, 97);
 }
 
 html {
@@ -30,17 +31,33 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   padding: 1.4rem 4rem;
+
+  @media screen and (min-width: 1080px) {
+    flex-wrap: nowrap;
+  }
 
   .navigation__wrapper {
     display: flex;
     gap: 7rem;
     align-items: center;
     width: 100%;
+
+    @media screen and (max-width: 700px) {
+      gap: 1rem;
+      flex-direction: column;
+    }
+
     .navigation__menu {
       display: flex;
       gap: 2rem;
       align-items: center;
+      flex-wrap: wrap;
+
+      @media screen and (min-width: 1080px) {
+        flex-wrap: nowrap;
+      }
 
       .menu__item {
         position: relative;
@@ -88,10 +105,17 @@ header {
   }
   .searchbar {
     width: 100%;
+
     .wrapper {
       display: flex;
       width: 100%;
       justify-content: flex-end;
+
+      @media screen and (max-width: 1080px) {
+        margin-top: 2rem;
+        justify-content: center;
+      }
+
       input {
         width: 50%;
         padding: 0.7rem;
