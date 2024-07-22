@@ -13,3 +13,104 @@ html {
   font-optical-sizing: auto;
   font-style: normal;
 }
+
+.button {
+  background-color: var(--green);
+  color: var(--white);
+  font-weight: 400;
+  font-size: 1.125rem;
+  padding: 0.6rem 4rem;
+
+  &.search {
+    padding: 0.65rem 0.8rem;
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 4rem;
+
+  .navigation__wrapper {
+    display: flex;
+    gap: 7rem;
+    align-items: center;
+    width: 100%;
+    .navigation__menu {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+
+      .menu__item {
+        position: relative;
+
+        &:hover a,
+        &:focus-within a {
+          color: var(--green);
+        }
+        &:hover button,
+        &:focus-within button {
+          color: var(--green);
+        }
+
+        &:not(&:nth-of-type(1))::before {
+          content: "|";
+          position: absolute;
+          top: 50%;
+          left: -1rem;
+          transform: translateY(-50%);
+          color: var(--black);
+        }
+        a {
+          text-decoration: none;
+          color: var(--black);
+          font-size: 18px;
+        }
+        button {
+          position: relative;
+          font-family: inherit;
+          font-size: 18px;
+          background: transparent;
+          border: none;
+          cursor: pointer;
+
+          .chevron {
+            position: absolute;
+            top: 50%;
+            right: -20px;
+            display: inline-block;
+            transform: rotate(90deg) translate(-100%);
+          }
+        }
+      }
+    }
+  }
+  .searchbar {
+    width: 100%;
+    .wrapper {
+      display: flex;
+      width: 100%;
+      justify-content: flex-end;
+      input {
+        width: 50%;
+        padding: 0.8rem;
+        border: 2px solid var(--green);
+
+        &::placeholder {
+          font-family: inherit;
+          font-size: 18px;
+          color: var(--light-green);
+        }
+      }
+
+      button {
+        border: none;
+        img {
+          width: 1.2rem;
+          aspect-ratio: 1;
+        }
+      }
+    }
+  }
+}

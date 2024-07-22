@@ -8,6 +8,37 @@
     <title>Accesibility</title>
   </head>
   <body>
-    <div></div>
+    <header>
+      <div class="navigation__wrapper">
+        <img src="./public/logo.png" alt="application logo" />
+        <nav class="navigation">
+          <ul class="navigation__menu">
+            <li class="menu__item">
+              <a href="#">About Us</a>
+            </li>
+            <li class="menu__item">
+              <a href="#">Contact Us</a>
+            </li>
+            <li class="menu__item">
+              <a href="#">Blog</a>
+            </li>
+            <li class="menu__item">
+              <a href="#">Site Map</a>
+            </li>
+            <li class="menu__item">
+              <button href="#">Eng <span class="chevron">></span></button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <form class="searchbar">
+        <div class="wrapper">
+          <input type="text" placeholder="Search this site" />
+          <button type="submit" class="button search">
+            <img src="./public/searchIcon.png" alt="magnifier icon" />
+          </button>
+        </div>
+      </form>
+    </header>
   </body>
 </html>
