@@ -628,11 +628,11 @@ footer {
       margin-bottom: 2.5rem;
 
       &:last-child {
-        border-bottom: 1px solid var(--green-accent);
+        border-bottom: 1px solid var(--green);
       }
       a {
         text-decoration: none;
-        color: var(--green-accent);
+        color: var(--green);
         font-size: 18px;
       }
     }
@@ -692,7 +692,7 @@ footer {
         text-decoration: none;
         font-weight: 400;
         font-size: 14px;
-        color: var(--green-accent);
+        color: var(--green);
       }
     }
   }
