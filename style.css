@@ -224,7 +224,11 @@ header {
 
     img {
       width: 180px;
+      margin-inline: auto;
       aspect-ratio: 16/9;
+      @media screen and (max-width: 1080px) {
+        aspect-ratio: initial;
+      }
     }
 
     @media screen and (max-width: 1080px) {
@@ -278,7 +282,7 @@ header {
       justify-content: space-between;
       flex-direction: column;
       padding: 2.5rem;
-      background-image: url("./public/formImage.png");
+      background-image: url("./public/formImage.webp");
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -658,7 +662,7 @@ footer {
 
       img {
         width: 50px;
-        aspect-ratio: 5/3;
+        height: 30px;
       }
 
       @media screen and (max-width: 768px) {
